@@ -38,7 +38,8 @@
 }
 
 .complete{
-  background: none;
+  /* background: none; */
+  background:rgba(0,0,0,0.5);
   color: white;
   border: 5px solid white;
 }

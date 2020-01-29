@@ -12,6 +12,9 @@ const CardContainer = styled.div`
 const Title = styled.h1`
     color: white;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    @media(max-width: 570px){
+        font-size: 1.35rem;
+    }
 `;
 
 const TaskList = props => {

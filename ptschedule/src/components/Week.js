@@ -8,8 +8,8 @@ const TaskDiv = styled.div`
 `;
 
 const ContainerDiv = styled.div`
-    border: 1px solid green;
-    width: 25%;
+    // border: 1px solid green;
+    width: 35%;
     margin: 4%;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
     // display: flex;
@@ -18,6 +18,13 @@ const ContainerDiv = styled.div`
     // align-items: center;
     background: rgba(0,0,0,.5);
     color: white;
+    @media(max-width: 1250px){
+        width: 70%;
+    }
+    @media(max-width: 750px){
+        width: 90%;
+    }
+
 `;
 
 const DayDiv=styled.div``;
@@ -25,6 +32,18 @@ const DayDiv=styled.div``;
 const Title = styled.h4`
     color: white;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+`;
+
+const ActDiv=styled.div`
+    background: rgba(0,0,0,.5);
+    padding: 5px 0;
+    margin: 1% auto;
+    width: 70%;
+
+`;
+
+const Para = styled.p`
+    // padding: 1% 0;
 `;
 
 const Week = (props) => {
@@ -38,10 +57,10 @@ const Week = (props) => {
                 <TaskDiv>
                     {tasks[day].map(task => {
                         return (
-                            <div>
-                                <p>{task.time}</p>
-                                <p>{task.activity}</p>
-                            </div>
+                            <ActDiv>
+                                <Para>{task.time}</Para>
+                                <Para>{task.activity}</Para>
+                            </ActDiv>
                             
                         )
                     })}
@@ -53,10 +72,10 @@ const Week = (props) => {
                 <TaskDiv>
                     {tasks[day].map(task => {
                         return (
-                            <div>
+                            <ActDiv>
                                 <p>{task.time}</p>
                                 <p>{task.activity}</p>
-                            </div>
+                            </ActDiv>
                             
                         )
                     })}

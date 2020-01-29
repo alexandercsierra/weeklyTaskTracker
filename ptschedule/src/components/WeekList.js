@@ -7,7 +7,7 @@ const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid red;
+    // border: 1px solid red;
 `;
 
 const WeekList = (props) => {

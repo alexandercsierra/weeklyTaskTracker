@@ -10,6 +10,16 @@ const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media(max-width: 1490px){
+        width: 20%;
+    }
+    @media(max-width: 1010px){
+        width: 30%;
+    }
+    @media(max-width: 570px){
+        width: 50%;
+    }
 `;
 
 const Button = styled.div`
