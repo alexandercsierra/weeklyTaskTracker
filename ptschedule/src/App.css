@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.complete{
+  background: none;
+  color: white;
+  border: 5px solid white;
+}
+
+.incomplete{
+  background: white;
+  border: 5px solid white;
+}
+
+.incompleteBtn{
+  background: white;
+  color: #1D94A1;
+
+}
+
+.completeBtn{
+  color: white;
+  background: #1D94A1;
+
+}
