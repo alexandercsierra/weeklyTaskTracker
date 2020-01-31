@@ -17,9 +17,9 @@ function App() {
   useEffect(()=>{
     const dateArray = moment().format('MMMM D').split(" ");
     setCurrentDate(dateArray)
-    console.log(currentDate);
+    // console.log(currentDate);
     setCurrentDay(moment().format('dddd'))
-    console.log("from the useEffect")
+    // console.log("from the useEffect")
   }, [currentDay, reload])
 
 

@@ -21,6 +21,8 @@ const TaskList = props => {
     const [dateWeek, setDateWeek] = useState("");
     const [letterDay, setLetterDay] = useState("");
     const [capWeekName, setCapWeekName] = useState("");
+
+
     
     
     useEffect(()=>{
@@ -34,7 +36,7 @@ const TaskList = props => {
             values[0].forEach(date => {
 
                 if (date===Number(day)){
-                    console.log("match")
+                    // console.log("match")
                     return letterWeek = "a"
                 }
 
@@ -42,7 +44,7 @@ const TaskList = props => {
             values[1].forEach(date => {
 
                 if (date===Number(day)){
-                    console.log("match")
+                    // console.log("match")
                     return letterWeek = "b"
                 }
 
@@ -61,6 +63,8 @@ const TaskList = props => {
             
         }
     },[props.currentDate])
+
+    // console.log('THIS IS DATEWEEK', dateWeek)
 
     
 
