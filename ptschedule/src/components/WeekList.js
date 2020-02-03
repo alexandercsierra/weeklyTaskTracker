@@ -7,56 +7,22 @@ import Week from './Week'
 
 const WeekList = (props) => {
     const {week} = props;
-    // const [weekList, setWeekList] = useState([]);
     const [dayNames, setDayNames] = useState([]);
 
     useEffect(()=>{
-        
+        //if week is a week, filter out b week tasks and set the remaining days to state dayNames
         if (week === 'a'){
             const keys = Object.keys(tasks);
             const filteredKeys = keys.filter(key => key.includes('b') === false);
-            // const weekArrs = filteredKeys.map(key => tasks[key]);
-            
-            // const justDayNames = filteredKeys.map(key => {
-            //    key = key.substring(1);
-            //    console.log(key);
-            // })
-            
-
             setDayNames(filteredKeys);
-            
 
-            const vals = Object.values(tasks);
-            const taskList = [];
-            for (let i=0; i<7; i++){
-                for (let j=0; j<vals[i].length; j++){
 
-                    taskList.push(vals[i][j]);
-                }
-            }
-
-            // setWeekList(taskList);
-
-            
+        //if week is b week, filter out a week tasks and set the remaining days to state dayNames   
         } else if (week === 'b'){
             const keys = Object.keys(tasks);
             const filteredKeys = keys.filter(key => key.includes('b') === true);
-            // const weekArrs = filteredKeys.map(key => tasks[key]);
-            
-            // const justDayNames = filteredKeys.map(key => {
-            //    key = key.substring(1);
-            // })
-            console.log('filtered b keys', filteredKeys);
             setDayNames(filteredKeys);
-            const vals = Object.values(tasks);
-            const taskList = [];
-            for (let i=0; i<7; i++){
-                for (let j=0; j<vals[i].length; j++){
-                    taskList.push(vals[i][j]);
-                }
-            }
-            console.log('tasklist', taskList);
-            // setWeekList(taskList);
+
         }
     },[week])
     
@@ -81,7 +47,7 @@ const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // border: 1px solid red;
+
 `;
 
 const Title = styled.h1`

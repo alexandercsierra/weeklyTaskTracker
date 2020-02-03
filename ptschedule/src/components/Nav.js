@@ -14,6 +14,7 @@ export const Nav = (props) => {
                 <TheNavLink to="/" exact={true} onClick={()=>props.setReload(true)}>Today</TheNavLink>
                 <TheNavLink to="/aweek" onClick={()=>props.setReload(false)}>A Week Schedule</TheNavLink>
                 <TheNavLink to="/bweek" onClick={()=>props.setReload(false)}>B Week Schedule</TheNavLink>
+                <TheNavLink to="/resources" onClick={()=>props.setReload(false)}>Resources</TheNavLink>
             </LinkDiv>
             
         </NavBar>
@@ -25,6 +26,7 @@ const NavBar = styled.nav`
     background: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @media(max-width: 665px){
         flex-direction: column;
         
@@ -37,16 +39,21 @@ const Title = styled.h2`
     color: #125a60;
     width: 100%;
     @media(max-width: 750px){
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
     
 `;
 
 const TitleDiv = styled.div`
     width: 40%;
-    border: 1px solid red;
     display: flex;
     justify-content: flex-start;
+    @media(max-width: 655px){
+        width: 100%;
+        // font-size: 1rem;
+        // border: 1px solid red;
+        padding: 2%;
+    }
 
 `;
 
@@ -70,6 +77,6 @@ const LinkDiv = styled.div`
         width: 50%;
     }
     @media(max-width: 665px){
-        width: 70%;
+        width: 100%;
     }
 `;

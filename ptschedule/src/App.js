@@ -7,6 +7,7 @@ import moment from 'moment'
 import {Nav} from './components/Nav'
 import {Route, withRouter} from 'react-router-dom'
 import WeekList from './components/WeekList'
+import Resources from './components/Resources'
 
 function App() {
   //current full date
@@ -19,9 +20,15 @@ function App() {
 
   useEffect(()=>{
     //set current date to state
+    // let time = moment().format('LT');
+    // console.log(time);
+    // if (time === '1:32 AM'){
+    //   console.log("cleared");
+    // }
     const dateArray = moment().format('MMMM D').split(" ");
     setCurrentDate(dateArray)
     setCurrentDay(moment().format('dddd'))
+    
 
   }, [currentDay, reload])
 
@@ -34,6 +41,7 @@ function App() {
       <Route exact path="/"><TaskList tasks={tasks} currentDay={currentDay} currentDate={currentDate}/></Route>
       <Route path='/aweek'><WeekList week={"a"}/></Route>
       <Route path='/bweek'><WeekList week={"b"}/></Route>
+      <Route path='/resources'><Resources/></Route>
       
       
     </div>

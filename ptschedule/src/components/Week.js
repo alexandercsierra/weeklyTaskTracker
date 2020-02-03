@@ -8,14 +8,9 @@ const TaskDiv = styled.div`
 `;
 
 const ContainerDiv = styled.div`
-    // border: 1px solid green;
-    width: 35%;
+    width: 25%;
     margin: 4%;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     background: rgba(0,0,0,.5);
     color: white;
     @media(max-width: 1250px){
@@ -30,6 +25,7 @@ const ContainerDiv = styled.div`
 const DayDiv=styled.div``;
 
 const Title = styled.h4`
+    font-size: 1.3rem;
     color: white;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 `;
@@ -43,7 +39,8 @@ const ActDiv=styled.div`
 `;
 
 const Para = styled.p`
-    // padding: 1% 0;
+    padding-left: 4%;
+    text-align: left;
 `;
 
 const Week = (props) => {
@@ -58,8 +55,8 @@ const Week = (props) => {
                     {tasks[day].map(task => {
                         return (
                             <ActDiv>
-                                <Para>{task.time}</Para>
-                                <Para>{task.activity}</Para>
+                                <Para>{task.time}: {task.activity}</Para>
+                                {/* <Para></Para> */}
                             </ActDiv>
                             
                         )
@@ -68,13 +65,12 @@ const Week = (props) => {
             </DayDiv>}
             {week==="b" && 
             <DayDiv>
-                <h4>{day.substring(1)}</h4>
+                <Title>{day.substring(1)}</Title>
                 <TaskDiv>
                     {tasks[day].map(task => {
                         return (
                             <ActDiv>
-                                <p>{task.time}</p>
-                                <p>{task.activity}</p>
+                                <Para>{task.time}: {task.activity}</Para>
                             </ActDiv>
                             
                         )

@@ -62,7 +62,7 @@ const Task = props => {
 export default Task
 
 const Card = styled.div`
-    width: 10%;
+    width: 15%;
     padding: 2%;
     margin: 1%;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);

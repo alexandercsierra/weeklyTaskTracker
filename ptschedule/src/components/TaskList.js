@@ -41,17 +41,19 @@ const QCard = styled.div`
 `;
 
 const Button = styled.div`
-    margin-top: 2%;
-    width: 50%;
+    background: white;
+    margin: 10% auto;
+    width: 60%;
     padding: 4% 0;
     // border: none;
     cursor: pointer;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
 
+
 `;
 
 const Qdiv = styled.div`
-    border: 1px solid red;
+    // border: 1px solid red;
     margin: 0 auto;
     width: 30%;
 `;
