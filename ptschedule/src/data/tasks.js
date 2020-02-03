@@ -206,254 +206,313 @@ const tasks = {
             activity: 'Take start of day attendance'
         },
         {
+            id: 38,
             time: '9:00AM',
             activity: 'Project Time'
         },
         {
+            id: 39,
             time: '9:15AM',
             activity: 'Module 1:1s begin to review A week Monday\'s project'
         },
         {
+            id: 40,
             time: '11:30AM',
             activity: 'Take end of day attendance'
         },
         {
+            id: 41,
             time: '11:30AM',
             activity: 'Standup Meeting'
         },
         {
+            id: 42,
             time: '12:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     aSunday: [
         {
+            id: 43,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 44,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 45,
             time: '6:00PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 46,
             time: '6:00PM',
             activity: 'Project Time'
         },
         {
+            id: 47,
             time: '6:15PM',
             activity: 'Module 1:1s begin to review A week Monday\'s project'
         },
         {
+            id: 48,
             time: '8:30PM',
             activity: 'Take end of day attendance'
         },
         {
+            id: 49,
             time: '8:30PM',
             activity: 'Standup Meeting'
         },
         {
+            id: 50,
             time: '9:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     bMonday: [
         {
+            id: 51,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 52,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 53,
             time: '6:00PM',
             activity: 'Training Kit Review'
         },
         {
+            id: 54,
             time: '6:30PM',
             activity: 'Guided Lecture'
         },
         {
+            id: 55,
             time: '6:45PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 56,
             time: '8:30PM',
             activity: 'Project time'
         },
         {
+            id: 57,
             time: '9:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     bTuesday: [
         {
+            id: 58,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 59,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 60,
             time: '6:00PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 61,
             time: '6:00PM',
             activity: 'Project Time'
         },
         {
+            id: 62,
             time: '6:15PM',
             activity: 'Module 1:1s begin to review A week Thursday\'s project'
         },
         {
+            id: 63,
             time: '8:30PM',
             activity: 'Take end of day attendance'
         },
         {
+            id: 64,
             time: '8:30PM',
             activity: 'Standup Meeting'
         },
         {
+            id: 65,
             time: '9:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     bWednesday: [
         {
+            id: 66,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 67,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 68,
             time: '6:00PM',
             activity: 'Training Kit Review'
         },
         {
+            id: 69,
             time: '6:30PM',
             activity: 'Guided Lecture'
         },
         {
+            id: 70,
             time: '6:45PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 71,
             time: '8:30PM',
             activity: 'Project time'
         },
         {
+            id: 72,
             time: '9:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     bThursday: [
         {
+            id: 73,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 74,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 75,
             time: '6:00PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 76,
             time: '6:00PM',
             activity: 'Project Time'
         },
         {
+            id: 77,
             time: '6:15PM',
             activity: 'Module 1:1s for B Week Monday\'s project'
         },
         {
+            id: 78,
             time: '8:30PM',
             activity: 'Take end of day attendance'
         },
         {
+            id: 79,
             time: '8:30PM',
             activity: 'Standup Meeting'
         },
         {
+            id: 80,
             time: '9:00PM',
             activity: 'Module retrospective form due'
         }
     ],
     bFriday: [
         {
+            id: 81,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 82,
             time: '5:30PM',
             activity: 'TL Standup (optional)'
         },
         {
+            id: 83,
             time: '6:00PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 84,
             time: '6:00PM',
             activity: 'Sprint Challenge'
         },
         {
+            id: 85,
             time: '9:00PM',
             activity: 'Sprint retrospective form due'
         }
     ],
     bSaturday: [
         {
+            id: 86,
             time: '8:00AM',
             activity: 'Clock in'
         },
         {
+            id: 87,
             time: '8:00AM',
             activity: 'TL Standup (optional)'
         },
         {
+            id: 88,
             time: '9:00AM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 89,
             time: '9:00AM',
             activity: 'Sprint Challenge'
         },
         {
+            id: 90,
             time: '12:00PM',
             activity: 'Sprint retrospective form due'
         },
         {
+            id: 91,
             time: '12:00PM',
             activity: 'Clock out'
         }
     ],
     bSunday: [
         {
+            id: 92,
             time: '5:30PM',
             activity: 'Clock in'
         },
         {
+            id: 93,
             time: '5:30PM',
             activity: 'TL Standup'
         },
         {
+            id: 94,
             time: '6:00PM',
             activity: 'Take start of day attendance'
         },
         {
+            id: 95,
             time: '6:00PM',
             activity: 'Sprint Challenge'
         },
         {
+            id: 96,
             time: '9:00PM',
             activity: 'Sprint retrospective form due'
         }

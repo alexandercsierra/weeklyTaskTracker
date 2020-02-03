@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import tasks from './data/tasks'
 import TaskList from './components/TaskList'
@@ -9,17 +9,20 @@ import {Route, withRouter} from 'react-router-dom'
 import WeekList from './components/WeekList'
 
 function App() {
+  //current full date
   const [currentDate, setCurrentDate] = useState('');
+
   const [currentDay, setCurrentDay] = useState('')
+
   const [reload, setReload] = useState(false);
 
 
   useEffect(()=>{
+    //set current date to state
     const dateArray = moment().format('MMMM D').split(" ");
     setCurrentDate(dateArray)
-    // console.log(currentDate);
     setCurrentDay(moment().format('dddd'))
-    // console.log("from the useEffect")
+
   }, [currentDay, reload])
 
 

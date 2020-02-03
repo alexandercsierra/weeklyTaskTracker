@@ -1,6 +1,66 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 
+
+const Task = props => {
+    const {task} = props;
+    
+    // console.log("STORED", storedComplete);
+    // const [storedComplete, setStoredComplete] = useState("");
+    const [classes, setClasses] = useState('incomplete');
+    const [buttonClass, setButtonClass] = useState('incompleteBtn')
+    const [buttonText, setButtonText] = useState('')
+    const [complete, setComplete] = useState(false);
+    
+    
+
+    // useEffect(()=>{
+    //     if (storedComplete){
+    //         setComplete(storedComplete);
+    //     }
+    // }, [])
+
+
+
+    useEffect(()=>{
+        
+        if (task){
+            const completedValue = window.localStorage.getItem(task.id);
+            const parsed = JSON.parse(completedValue);
+            // setStoredComplete(parsed)
+            setComplete(parsed);
+        }
+
+        if (complete){
+            setButtonText('undo');
+            setClasses('complete');
+            setButtonClass('incompleteBtn')
+            
+        } else {
+            setClasses('incomplete');
+            setButtonText('complete');
+            setButtonClass('completeBtn')
+        }
+    }, [complete])
+
+    return (
+        <Card className={classes}>
+            <p>{task.time}</p>
+            <p>{task.activity}</p>
+            <Button className={buttonClass} onClick={(e)=>{
+                e.preventDefault();
+                console.log('from the completed button', complete)
+                setComplete(!complete);
+                window.localStorage.setItem(task.id, JSON.stringify(!complete))
+                // setStoredComplete(!complete);
+                
+            }}>{buttonText}</Button>
+        </Card>
+    )
+}
+
+export default Task
+
 const Card = styled.div`
     width: 10%;
     padding: 2%;
@@ -31,66 +91,3 @@ const Button = styled.div`
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
 
 `;
-
-const Para = styled.p``;
-
-const Task = props => {
-    const {task} = props;
-    
-    // console.log("STORED", storedComplete);
-    const [storedComplete, setStoredComplete] = useState("");
-    const [classes, setClasses] = useState('incomplete');
-    const [buttonClass, setButtonClass] = useState('incompleteBtn')
-    const [buttonText, setButtonText] = useState('')
-    const [complete, setComplete] = useState(false);
-    
-    
-
-    // useEffect(()=>{
-    //     if (storedComplete){
-    //         setComplete(storedComplete);
-    //     }
-    // }, [])
-
-
-
-    useEffect(()=>{
-        
-        if (task){
-            const completedValue = window.localStorage.getItem(task.id);
-            const parsed = JSON.parse(completedValue);
-            setStoredComplete(parsed)
-            setComplete(parsed);
-        }
-
-        if (complete){
-            setButtonText('undo');
-            setClasses('complete');
-            setButtonClass('incompleteBtn')
-            console.log("IFFFF")
-            
-        } else {
-            setClasses('incomplete');
-            setButtonText('complete');
-            setButtonClass('completeBtn')
-            console.log("from the else")
-        }
-    }, [complete])
-
-    return (
-        <Card className={classes}>
-            <p>{task.time}</p>
-            <p>{task.activity}</p>
-            <Button className={buttonClass} onClick={(e)=>{
-                e.preventDefault();
-                console.log('from the completed button', complete)
-                setComplete(!complete);
-                window.localStorage.setItem(task.id, JSON.stringify(!complete))
-                setStoredComplete(!complete);
-                
-            }}>{buttonText}</Button>
-        </Card>
-    )
-}
-
-export default Task

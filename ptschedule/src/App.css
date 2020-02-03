@@ -61,6 +61,13 @@
 
 }
 
-/* .active{
-  background: yellow;
-} */
+
+.active{
+  text-decoration: none;
+  /* padding: 2% 4%; */
+  width: 30%;
+  background: #08252F;
+  color: white !important;
+}
+
+
