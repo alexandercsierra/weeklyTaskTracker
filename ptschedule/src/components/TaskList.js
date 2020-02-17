@@ -127,15 +127,6 @@ const TaskList = props => {
                     return <Task key={task.id} task={task}/>
                 }): "loading"}
             </CardContainer>
-            <Qdiv>
-                <Button onClick={getQuestion}>Get a Question</Button>
-                {rather && <QCard>
-                    <h4>{rather.title}</h4>
-                    <p>{rather.choicea}</p>
-                    <p>OR</p>
-                    <p>{rather.choiceb}</p>
-                </QCard>}
-            </Qdiv>
         </div>
         
     )

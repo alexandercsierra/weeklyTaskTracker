@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import modules from '../data/modules'
+// import modules from '../data/modules'
 
 export default function Resources() {
     // const mapped = modules.map(mods=>mods.weeks.map(week=>week.days));
