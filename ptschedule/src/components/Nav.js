@@ -8,7 +8,7 @@ export const Nav = (props) => {
     return (
         <NavBar>
             <TitleDiv>
-                <Title>Lambda PT Schedule</Title>
+                <Title>Weekly Class Schedule</Title>
             </TitleDiv>
             <LinkDiv>
                 <TheNavLink to="/" exact={true} onClick={()=>props.setReload(true)}>Today</TheNavLink>

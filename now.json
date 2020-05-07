@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "ptschedule",
+    "builds": [{ "src": "ptschedule/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "routes": [
+
+        { "src": "/static/(.*)", "dest": "ptschedule/static/$1" },
+        { "src": "/(.*)", "dest": "/ptschedule/index.html" }
+    ]
+
+}
