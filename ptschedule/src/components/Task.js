@@ -5,20 +5,11 @@ import styled from 'styled-components'
 const Task = props => {
     const {task} = props;
     
-    // console.log("STORED", storedComplete);
-    // const [storedComplete, setStoredComplete] = useState("");
     const [classes, setClasses] = useState('incomplete');
     const [buttonClass, setButtonClass] = useState('incompleteBtn')
     const [buttonText, setButtonText] = useState('')
     const [complete, setComplete] = useState(false);
     
-    
-
-    // useEffect(()=>{
-    //     if (storedComplete){
-    //         setComplete(storedComplete);
-    //     }
-    // }, [])
 
 
 
@@ -27,7 +18,6 @@ const Task = props => {
         if (task){
             const completedValue = window.localStorage.getItem(task.id);
             const parsed = JSON.parse(completedValue);
-            // setStoredComplete(parsed)
             setComplete(parsed);
         }
 
@@ -52,7 +42,6 @@ const Task = props => {
                 console.log('from the completed button', complete)
                 setComplete(!complete);
                 window.localStorage.setItem(task.id, JSON.stringify(!complete))
-                // setStoredComplete(!complete);
                 
             }}>{buttonText}</Button>
         </Card>

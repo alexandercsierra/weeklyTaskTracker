@@ -19,12 +19,7 @@ function App() {
 
 
   useEffect(()=>{
-    //set current date to state
-    // let time = moment().format('LT');
-    // console.log(time);
-    // if (time === '1:32 AM'){
-    //   console.log("cleared");
-    // }
+    
     const dateArray = moment().format('MMMM D').split(" ");
     setCurrentDate(dateArray)
     setCurrentDay(moment().format('dddd'))
@@ -36,7 +31,6 @@ function App() {
   return (
     <div className="App">
 
-      {/* <h1>Lambda Web PT Schedule</h1> */}
       <Nav setReload={setReload}/>
       <Route exact path="/"><TaskList tasks={tasks} currentDay={currentDay} currentDate={currentDate}/></Route>
       <Route path='/aweek'><WeekList week={"a"}/></Route>

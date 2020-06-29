@@ -87,7 +87,6 @@ const TaskList = props => {
             values[0].forEach(date => {
 
                 if (date===Number(day)){
-                    // console.log("match")
                     return letterWeek = "a"
                 }
 
@@ -95,7 +94,6 @@ const TaskList = props => {
             values[1].forEach(date => {
 
                 if (date===Number(day)){
-                    // console.log("match")
                     return letterWeek = "b"
                 }
 
@@ -103,9 +101,7 @@ const TaskList = props => {
                 
 
             setLetterDay(letterWeek+props.currentDay);
-            // setDateWeek(letterWeek)
             setDateWeek(props.tasks[letterDay])
-            // setDateWeek(props.tasks["aThursday"])
             const weekName = letterDay[0];
             if (weekName){
                 setCapWeekName(weekName.toUpperCase())
@@ -115,7 +111,6 @@ const TaskList = props => {
         }
     },[props.currentDate])
 
-    // console.log('THIS IS DATEWEEK', dateWeek)
 
     
 

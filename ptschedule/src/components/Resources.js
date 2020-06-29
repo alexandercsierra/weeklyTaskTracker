@@ -1,11 +1,45 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-// import modules from '../data/modules'
+import axios from 'axios'
+import Resource from './Resource'
 
 export default function Resources() {
-    // const mapped = modules.map(mods=>mods.weeks.map(week=>week.days));
 
-    // console.log(mapped[0]);
+    const [resource, setResource] = useState({
+        name: '',
+        url: '',
+        category:'',
+        image_url: ''
+    })
+
+    const [resources, setResources] = useState([])
+
+    // const handleChange = e => {
+    //     setResource({
+    //         ...resource,
+    //         [e.target.name]: e.target.value
+    //     })
+    // }
+
+    // const onSubmit = e => {
+    //     e.preventDefault();
+    //     axios.post('https://localhost:7000', resource)
+    //         .then(res=>console.log(res))
+    //         .catch(err=>console.log(err))
+    //     setResource({
+    //         name: '',
+    //         url: '',
+    //         category:'',
+    //         image_url: ''
+    //     })
+    // }
+
+    // useEffect(()=>{
+    //     axios.get('http://localhost:7000/api/resources')
+    //         .then(res=>setResources(res.data))
+    //         .catch(err=>console.log(err))
+    // },[])
+
     return (
         <ContainerDiv>
             <DayDiv>
@@ -16,6 +50,15 @@ export default function Resources() {
                     </ActDiv>
                 </TaskDiv>
             </DayDiv>
+            {/* <form onSubmit={onSubmit}>
+                <input name='name' placeholder='name' value={resource.name} onChange={handleChange}/>
+                <input name='url' placeholder='url' value={resource.url} onChange={handleChange}/>
+                <input name='category' placeholder='category' value={resource.category} onChange={handleChange}/>
+                <input name='image_url' placeholder='image_url' value={resource.image_url} onChange={handleChange}/>
+                <Button>Submit</Button>
+            </form>
+
+            {resources && resources.map(resource => <Resource resource={resource}/>)} */}
         </ContainerDiv>
     )
 }
@@ -60,4 +103,14 @@ const ActDiv=styled.div`
 const Para = styled.p`
     padding-left: 4%;
     text-align: left;
+`;
+
+const Button = styled.button`
+    margin-top: 2%;
+    width: 50%;
+    padding: 4% 0;
+    // border: none;
+    cursor: pointer;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+
 `;
